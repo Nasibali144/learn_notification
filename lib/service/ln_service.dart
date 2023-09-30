@@ -35,7 +35,7 @@ sealed class LNService {
   }
 
   static void onDidReceiveNotificationResponse(NotificationResponse response) {
-    print("Read Notification");
+    print("Read Notification: ${response.payload}");
     /// TODO
   }
 
@@ -52,7 +52,7 @@ sealed class LNService {
   }
 
   static Future<void> sendNotification() async {
-    await flutterLocalNotificationsPlugin.show(0, 'plain title', 'plain body', details, payload: 'item x');
+    await flutterLocalNotificationsPlugin.show(0, 'Flutter G5', 'Anonymous: Menda error chiqdi qarashib yuboriylar...', details, payload: 'Data');
   }
 
 }
