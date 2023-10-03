@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:learn_notification/service/fcm_service.dart';
 import 'package:learn_notification/service/ln_service.dart';
 import 'firebase_options.dart';
 
@@ -10,6 +11,7 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   await LNService.settings();
+  await FCMService.init();
 
   runApp(const MyApp());
 }
