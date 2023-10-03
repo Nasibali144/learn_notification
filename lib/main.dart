@@ -4,6 +4,8 @@ import 'package:learn_notification/service/fcm_service.dart';
 import 'package:learn_notification/service/ln_service.dart';
 import 'firebase_options.dart';
 
+/// dZkB7BkLSI6LjmLv8oS8JS:APA91bFOFTVRnB71gznDT9G4ZaGRO9At8L9t7AmT686sI89Aso7DyrlrqJ3f5kfuEHqJvy02u1OY84cyPRGtKMsZH8Q8MeHrp-igtr2s1gUkkj7wB2YTUSImzPUKWJXgT6wyibXEHNib
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -51,7 +53,7 @@ class _HomeState extends State<Home> {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            LNService.sendNotification();
+            FCMService.sendMessage();
           },
           child: const Text("Show notify"),
         ),

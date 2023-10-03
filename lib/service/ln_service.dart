@@ -51,8 +51,8 @@ sealed class LNService {
     return notificationDetails;
   }
 
-  static Future<void> sendNotification() async {
-    await flutterLocalNotificationsPlugin.show(0, 'Flutter G5', 'Anonymous: Menda error chiqdi qarashib yuboriylar...', details, payload: 'Data');
+  static Future<void> sendNotification(String title, String body) async {
+    await flutterLocalNotificationsPlugin.show(0, title, body, details, payload: 'Data');
   }
 
 }
